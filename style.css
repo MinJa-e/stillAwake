@@ -4,8 +4,10 @@ input#menuicon{/* 메뉴 체크박스 안 보이게 */
 }
 input#menuicon + label{/* 메뉴 영역 선언 */
 	display:block;/*구역선언*/
-	width: 60px;
-	height: 40px;
+	top:30px;
+	left:35px;
+	width: 30px;
+	height: 20px;
 	position:relative;
 	cursor:pointer;/* 마우스 올라가면 커서 모양 바뀌게 */
 }
@@ -13,7 +15,7 @@ input#menuicon + label span{/* 햄버거 선 밑 그림 */
 	display:block;
 	position: absolute;
 	width: 100%;
-	height: 10px;
+	height: 2px;
 	border-radius: 30px;
 	background: #000;
 	transition:all .35s;
@@ -37,7 +39,7 @@ input#menuicon:CHECKED + label{
 
 input#menuicon:CHECKED + label span{
 	background: #fff;
-	height: 6px;/* X자 너무 커보여서 사이즈 조정용으로 */
+	height: 2px;/* X자 너무 커보여서 사이즈 조정용으로 */
 	width: 70%/* X자 너무 커보여서 사이즈 조정용으로 */
 }
 
@@ -65,4 +67,9 @@ div.sidebar{
 }
 input#menuicon:CHECKED + label + div {
 	left:0;
+}
+
+/* 로고 */
+div.logo{
+	text-align: center;
 }
