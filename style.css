@@ -1,4 +1,11 @@
 /* https://youtu.be/IvXuk5Sh4GE  햄버거 메뉴 참고 영상*/
+body{
+	margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 input#menuicon{/* 메뉴 체크박스 안 보이게 */
 	display:none;
 }
@@ -76,6 +83,6 @@ div.logo{
 }
 
 /* 대문(메인) 사진 */
-div.mainphoto{
+div.mainphoto img{
 	width:100%;
 }
