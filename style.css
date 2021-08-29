@@ -1,0 +1,68 @@
+/* https://youtu.be/IvXuk5Sh4GE  햄버거 메뉴 참고 영상*/
+input#menuicon{/* 메뉴 체크박스 안 보이게 */
+	display:none;
+}
+input#menuicon + label{/* 메뉴 영역 선언 */
+	display:block;/*구역선언*/
+	width: 60px;
+	height: 40px;
+	position:relative;
+	cursor:pointer;/* 마우스 올라가면 커서 모양 바뀌게 */
+}
+input#menuicon + label span{/* 햄버거 선 밑 그림 */
+	display:block;
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	border-radius: 30px;
+	background: #000;
+	transition:all .35s;
+}
+
+input#menuicon + label span:NTH-CHILD(1){/* 첫 번째 선 */
+	top:0;
+}
+input#menuicon + label span:NTH-CHILD(2){/* 두 번째 선 */
+	top:50%;
+	transform:translateY(-50%);
+}
+input#menuicon + label span:NTH-CHILD(3){/* 세 번째 선 */
+	bottom: 0;
+}
+
+/* 메뉴가 클릭 되었을 떄 */
+input#menuicon:CHECKED + label{
+	z-index: 2;
+}
+
+input#menuicon:CHECKED + label span{
+	background: #fff;
+	height: 6px;/* X자 너무 커보여서 사이즈 조정용으로 */
+	width: 70%/* X자 너무 커보여서 사이즈 조정용으로 */
+}
+
+input#menuicon:CHECKED + label span:NTH-CHILD(1){/* 첫 번째 선 */
+	top:50%;
+	transform:translateY(-50%) rotate(45deg);
+}
+input#menuicon:CHECKED + label span:NTH-CHILD(2){/* 두 번째 선 */
+	opacity:0;
+}
+input#menuicon:CHECKED + label span:NTH-CHILD(3){/* 세 번째 선 */
+	bottom: 50%;
+	transform:translateY(50%) rotate(-45deg);
+}
+div.sidebar{
+	width:300px;
+	height: 100%;
+	background: #222;
+	opacity: 50%;
+	position: fixed;
+	top: 0;
+	left: -300px;
+	z-index:1;/* 노출되는순서인듯 */
+	transition:all .35s;
+}
+input#menuicon:CHECKED + label + div {
+	left:0;
+}
