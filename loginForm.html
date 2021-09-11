@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>STILL AWAKE</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 나중에 틀 완성되고 나면 header부분 코드 중복되는거 include로 처리하기 -->
+<!-- 나중에 틀 완성되고 나면 header부분 코드 중복되는거 includ로 처리하기 -->
 <div class="header">
 	<input type="checkbox" id="menuicon">
 	<label for=menuicon>
@@ -44,7 +46,7 @@
 		</span>
 	</div>
 	<div class="logo">
-		<a href="#">
+		<a href="index.html">
 			<img src="img/title_logo.png">
 		</a>
 	</div>
@@ -56,13 +58,29 @@
 	</div>
 </div>
 <!-- header 끝 -->
-	<div class="mainphoto">
-		<a href="checklist.html">
-			<img src="img/main_photo1.jpg" style="margin-top:20px;">
-		</a>
-	</div>
-	<div class="mainbottom">
-	</div>
-<br>대표 상품 넣을? 자리<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><!-- 하단여백만들기용 -->
+<!-- main 시작  -->
+<div class="main">
+<form method="post"   action="member6.jsp">
+<h1  style="text-align:center">로그인창</h1>
+<table  align="center">
+      <tr>
+         <td width="200"><p align="right">아이디</td>
+         <td width="400"><input type="text" name="id"></td>
+      </tr>
+      <tr>
+          <td width="200"><p align="right">비밀번호</td>
+          <td width="400"><input type="password"  name="pwd"></td>
+      </tr>
+      <tr>
+          <td width="200"><p>&nbsp;</p></td>
+          <td width="400">
+			<input type="submit" value="로그인">
+			<input type="reset" value="다시입력">
+			<a href="joinForm.html"><input type="button" value="회원가입"></a>
+		  </td>
+      </tr>
+</table>
+</form>
+</div>
 </body>
 </html>
