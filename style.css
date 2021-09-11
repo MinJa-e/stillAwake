@@ -1,4 +1,49 @@
+/* https://youtu.be/Y2NNmhrsoNc 생활코딩-웹폰트 / 구글 폰트 https://fonts.google.com/?authuser=1&sort=popularity */
+/* https://d2.naver.com/helloworld/4969726 틀 잡은 뒤 폰트는 웹 폰트-> woff2.0 으로 바꿔서 용량 줄이기*/
 /* https://youtu.be/IvXuk5Sh4GE  햄버거 메뉴 참고 영상*/
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+div.header{
+	height: 53px;
+}
+
+div.mainphoto{
+	width : 100%;
+}
+
+/* 대문(메인) 사진 */
+div.mainphoto img{
+	width : 100%;
+}
+
+.tip{
+	position: absolute;
+	height:30%;
+	bottom:0px;
+}
+
+.topright{
+	position:absolute;
+	right:24px;
+	top:23px;
+}
+.topright a{
+	margin-left:14px;
+}
+.topright a:hover{
+	opacity:30%;
+}
+.main{
+	transform:translateX(50%) translateY(-49.9%);
+	position: absolute;
+	top:50%;
+	right:50%;
+}
+table{
+	border: 1px solid black;
+}
+
 body{
 	margin-left: 0px;
     margin-right: 0px;
@@ -6,8 +51,19 @@ body{
     margin-bottom: 0px;
 }
 
+a{
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+}/* 링크 밑줄,보라색 없애기 */
+
+.sidebar a:hover{
+	opacity:30%;
+}
+
 input#menuicon{/* 메뉴 체크박스 안 보이게 */
 	display:none;
+	
 }
 input#menuicon + label{/* 메뉴 영역 선언 */
 	display:block;/*구역선언*/
@@ -29,14 +85,17 @@ input#menuicon + label span{/* 햄버거 선 밑 그림 */
 }
 
 input#menuicon + label span:NTH-CHILD(1){/* 첫 번째 선 */
-	top:0;
+	top:0;	z-index: 2;
+	transition:all .35s;
 }
 input#menuicon + label span:NTH-CHILD(2){/* 두 번째 선 */
-	top:50%;
+	top:50%;	z-index: 2;
 	transform:translateY(-50%);
+	transition:all .35s;
 }
 input#menuicon + label span:NTH-CHILD(3){/* 세 번째 선 */
-	bottom: 0;
+	bottom: 0;	z-index: 2;
+	transition:all .35s;
 }
 
 /* 메뉴가 클릭 되었을 떄 */
@@ -45,7 +104,7 @@ input#menuicon:CHECKED + label{
 }
 
 input#menuicon:CHECKED + label span{
-	background: #fff;
+	background: black;
 	height: 2px;/* X자 너무 커보여서 사이즈 조정용으로 */
 	width: 70%/* X자 너무 커보여서 사이즈 조정용으로 */
 }
@@ -62,15 +121,22 @@ input#menuicon:CHECKED + label span:NTH-CHILD(3){/* 세 번째 선 */
 	transform:translateY(50%) rotate(-45deg);
 }
 div.sidebar{
-	width:450px;
+	padding-top: 100px;
+	width:225px;
 	height: 100%;
-	background: #a3a3a3;
+	background: white;
 	opacity: 100%;
 	position: fixed;
 	top: 0;
-	left: -450px;
+	left: -225px;
 	z-index:1;/* 노출되는순서인듯 */
 	transition:all .35s;
+}
+div.sidebar dd{
+	font-family: 'Noto Sans', sans-serif;
+}
+div.sidebar ul{
+	opacity: 30%;
 }
 input#menuicon:CHECKED + label + div {
 	left:0;
@@ -78,11 +144,11 @@ input#menuicon:CHECKED + label + div {
 
 /* 로고 */
 div.logo{
+	margin-top:4px;
 	text-align: center;
 	z-index: 0;
 }
 
-/* 대문(메인) 사진 */
-div.mainphoto img{
-	width:100%;
+div.logo a:hover{
+	opacity:30%;
 }
