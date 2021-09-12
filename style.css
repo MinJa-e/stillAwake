@@ -165,7 +165,6 @@ div.logo a:hover{
 	text-align:center;
 	margin-left: 12%;
 	margin-right: 12%;
-	height:870px;
 }
 .center form{
 	margin-top:10%;
@@ -191,4 +190,10 @@ div.logo a:hover{
 @media (max-height: 600px) {
   .tip{
     display:none;
+  }
+}
+@media (max-height:937px){
+	.center{
+		height:822px;
+	}
 }
