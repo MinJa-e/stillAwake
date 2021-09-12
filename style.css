@@ -6,7 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap');
 
 div.header{
-	height: 53px;
+	display:table;
+	height: 73px;
+	width:100%;
 }
 
 div.mainphoto{
@@ -71,7 +73,8 @@ input#menuicon + label{/* 메뉴 영역 선언 */
 	display:block;/*구역선언*/
 	top:30px;
 	left:35px;
-	width: 30px;
+	width: 30px;	
+    margin-right: -30px;
 	height: 20px;
 	position:relative;
 	cursor:pointer;/* 마우스 올라가면 커서 모양 바뀌게 */
@@ -103,6 +106,7 @@ input#menuicon + label span:NTH-CHILD(3){/* 세 번째 선 */
 /* 메뉴가 클릭 되었을 떄 */
 input#menuicon:CHECKED + label{
 	z-index: 2;
+	position:fixed;
 }
 
 input#menuicon:CHECKED + label span{
@@ -146,7 +150,8 @@ input#menuicon:CHECKED + label + div {
 
 /* 로고 */
 div.logo{
-	margin-top:4px;
+	display:table-cell;
+	vertical-align:middle;
 	text-align: center;
 	z-index: 0;
 }
@@ -160,6 +165,10 @@ div.logo a:hover{
 	text-align:center;
 	margin-left: 12%;
 	margin-right: 12%;
+	height:870px;
+}
+.center form{
+	margin-top:10%;
 }
 .center div{
 	display:inline-block;
@@ -176,8 +185,6 @@ div.logo a:hover{
 	opacity:30%
 }
 .center div img{
-	float:left;
-	position:inline-block;
 	width:100%;
 	height:100%;
 }

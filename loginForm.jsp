@@ -8,11 +8,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 나중에 틀 완성되고 나면 header부분 코드 중복되는거 includ로 처리하기 -->
+<!-- 나중에 틀 완성되고 나면 header부분 코드 중복되는거 include로 처리하기a -->
 <div class="header">
 	<input type="checkbox" id="menuicon">
 	<label for=menuicon>
- 		<span></span><!-- 햄버거 줄 1 -->
+ 		<span></span><!-- 햄버거 줄 1a -->
 		<span></span><!-- 햄버거 줄 2 -->
 		<span></span><!-- 햄버거 줄 3 -->
 	</label>
@@ -52,14 +52,14 @@
 	</div>
 	<div class="topright">
 		<a href=#><img src="img/search.svg"></a>
-		<a href=loginForm.jsp><img src="img/login2.svg"></a>
+		<a href=loginForm.html><img src="img/login2.svg"></a>
 		<a href=#><img src="img/heart.svg"></a>
 		<a href=#><img src="img/cart.svg"></a>
 	</div>
 </div>
 <!-- header 끝 -->
 <!-- main 시작  -->
-<div class="main">
+<div class="center">
 <form method="post"   action="member6.jsp">
 <h1  style="text-align:center">로그인창</h1>
 <table  align="center">
